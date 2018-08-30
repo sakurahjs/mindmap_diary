@@ -1,6 +1,6 @@
 <?php
 namespace App\Services;
-use App\Friend;
+use App\FriendRelation;
 use App\Mindmap;
 use App\Node;
 use App\Share;

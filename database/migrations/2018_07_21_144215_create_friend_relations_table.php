@@ -13,7 +13,7 @@ class CreateFriendsTable extends Migration
      */
     public function up()
     {
-        Schema::create('friends', function (Blueprint $table) {
+        Schema::create('friend_relations', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('friend_id')->unsigned();
@@ -21,7 +21,7 @@ class CreateFriendsTable extends Migration
             $table->timestamps();
         });
         
-        Schema::table('friends', function (Blueprint $table) {
+        Schema::table('friend_relations', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('friend_id')->references('id')->on('users');
         });
